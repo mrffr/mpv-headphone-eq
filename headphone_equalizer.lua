@@ -26,7 +26,7 @@ local eq_settings = {
 
 
 -- Script --
-local eq_on = default_on
+local eq_on = false
 
 local function clear_audio_filters()
   mp.command('no-osd af clr ""')
@@ -49,18 +49,21 @@ local function apply_eq()
 end
 
 local function display_status()
+  local status = eq_on and 'On' or 'Off'
+  local message = 'Eq: ' .. status
+  mp.osd_message(message, 1.5) -- display message on screen for 1.5 seconds
 end
 
 local function toggle_equalizer()
   clear_audio_filters()
+  eq_on = not eq_on
 
-  if not eq_on then
+  if eq_on then
     apply_gain()
     apply_eq()
   end
 
   display_status()
-  eq_on = not eq_on
 end
 
 if default_on then
