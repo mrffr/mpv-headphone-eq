@@ -41,7 +41,7 @@ local function apply_eq()
     mp.command(
       'no-osd af add lavfi=['.. 
       'equalizer=f=' .. band[1] .. 
-      ':width_type=q:' .. 
+      ':width_type=q' .. 
       ':w=' .. band[2] .. 
       ':g=' .. band[3] .. 
       ']')
