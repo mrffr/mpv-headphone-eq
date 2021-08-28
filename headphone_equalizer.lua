@@ -26,7 +26,18 @@ local eq_settings = {
 
 
 -- Script --
-local eq_on = false
+local eq_on = default_on
+
+local function toggle_equalizer()
+  apply_gain()
+  apply_eq()
+  display_status()
+  eq_on = not eq_on
+end
+
+if default_on then
+  toggle_equalizer()
+end
+
+
 mp.add_forced_key_binding(key_toggle_equalizer, toggle_equalizer)
-
-
