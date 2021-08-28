@@ -1,4 +1,4 @@
-# mpv-headphone-eq
+# mpv Headphone EQ
 mpv script to toggle equalizer useful for equalizing headphones
 
 For headphone settings see:

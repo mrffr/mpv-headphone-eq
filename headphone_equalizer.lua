@@ -1,13 +1,22 @@
+--[[
+mpv script to toggle equalizer useful for equalizing headphones
 
-local default_on = false
+ctrl+e -- toggle
 
+Copyright F Fitzgerald 2021
+License CC0-1.0
+--]]
+
+-- Script settings --
 local key_toggle_equalizer = 'ctrl+e'
+local default_on = false
 
 
 -- EQ settings --
---
--- the following eq settings are for DT 770 pro 250 Ohm with worn pads
--- change these settings to match your headphones!!
+--[[
+The following eq settings are for DT 770 pro 250 Ohm with worn pads.
+Please Change these settings to match your headphones!!
+--]]
 local gain_reduction = -5.5
 
 -- frequency, q value, dB change
