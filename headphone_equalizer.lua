@@ -3,7 +3,7 @@ mpv script to toggle equalizer useful for equalizing headphones
 
 ctrl+e -- toggle
 
-Copyright F Fitzgerald 2021
+Copyright F Fitzgerald 2021 https://github.com/mrffr
 License CC0-1.0
 --]]
 
