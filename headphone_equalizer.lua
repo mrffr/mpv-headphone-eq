@@ -28,9 +28,22 @@ local eq_settings = {
 -- Script --
 local eq_on = default_on
 
+local function clear_audio_filters()
+  mp.command('no-osd af clr ""')
+end
+
+local function apply_gain()
+  mp.command('no-osd af add lavfi=[volume=volume='.. gain_reduction .. 'dB]')
+end
+
 local function toggle_equalizer()
-  apply_gain()
-  apply_eq()
+  clear_audio_filters()
+
+  if not eq_on then
+    apply_gain()
+    apply_eq()
+  end
+
   display_status()
   eq_on = not eq_on
 end
