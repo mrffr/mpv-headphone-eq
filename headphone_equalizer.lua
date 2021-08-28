@@ -36,6 +36,12 @@ local function apply_gain()
   mp.command('no-osd af add lavfi=[volume=volume='.. gain_reduction .. 'dB]')
 end
 
+local function apply_eq()
+end
+
+local function display_status()
+end
+
 local function toggle_equalizer()
   clear_audio_filters()
 
