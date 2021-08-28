@@ -37,6 +37,15 @@ local function apply_gain()
 end
 
 local function apply_eq()
+  for _, band in ipairs(eq_settings) do
+    mp.command(
+      'no-osd af add lavfi=['.. 
+      'equalizer=f=' .. band[1] .. 
+      ':width_type=q:' .. 
+      ':w=' .. band[2] .. 
+      ':g=' .. band[3] .. 
+      ']')
+  end
 end
 
 local function display_status()
